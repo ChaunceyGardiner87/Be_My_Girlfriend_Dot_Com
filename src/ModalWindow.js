@@ -71,13 +71,13 @@ export default class ModalWindow extends React.Component {
           <div>
           <h1>Terms and Conditions</h1>
             <p>
-              1. Regular consuming noodles together <br/><br/>
-              2. Enjoying and valuing time together; and actively working to make it happen <br/><br/>
+              1. Enjoying and valuing time together; and actively working to make it happen <br/><br/>
               3. A commitment to updating the Trello adventure board
               4. Effective communication and problem-solving skills <br/><br/>
               5. Charlie will provide foot rubs on request
-              6.
-              
+              6. Parties agree to utilise a vast array of emojis for all communication needs. 🌟❤️😊
+              7. Regular consumption of noodles is mandatory <br/><br/>
+                  
           </p>
 
           <div className="acceptButton" style={{display: "inline-block", float: "left", marginLeft: "15%"}} onClick={this.acceptTerms}>
