@@ -56,7 +56,7 @@ export default class App extends Component {
     return (
     	<div className="root">
     		<div className="text">
-      			<h1>Laura, will you be my girlfriend?</h1>
+      			<h1>Holly, will you be my girlfriend?</h1>
       	</div>
 
       		<CheckboxController callback={this.checkboxCallback} />
