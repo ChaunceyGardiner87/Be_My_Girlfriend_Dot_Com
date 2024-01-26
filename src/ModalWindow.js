@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Modal from "react-modal";
+import $ from 'jquery';
 
 export default class ModalWindow extends React.Component {
     constructor () {
@@ -66,18 +67,17 @@ export default class ModalWindow extends React.Component {
     }
 
     getText() {
-      if (this.props.modalType == "terms" && this.state.accepted == false && this.state.declined == false) {
+      if (this.props.modalType == "terms" && this.state.accepted === false && this.state.declined === false) {
         return (
           <div>
           <h1>Terms and Conditions</h1>
             <p>
               1. Enjoying and valuing time together; and actively working to make it happen <br/><br/>
-              3. A commitment to updating the Trello adventure board
+              3. A commitment to updating the Trello adventure board<br/><br/>
               4. Effective communication and problem-solving skills <br/><br/>
-              5. Charlie will provide foot rubs on request
-              6. Parties agree to utilise a vast array of emojis for all communication needs. 🌟❤️😊
-              7. Regular consumption of noodles is mandatory <br/><br/>
-                  
+              5. Charlie will provide foot rubs on request<br/><br/>
+              6. Parties agree to utilise a vast array of emojis for all communication needs. 🌟❤️😊<br/><br/>
+              7. Regular consumption of noodles is mandatory
           </p>
 
           <div className="acceptButton" style={{display: "inline-block", float: "left", marginLeft: "15%"}} onClick={this.acceptTerms}>
@@ -89,7 +89,7 @@ export default class ModalWindow extends React.Component {
           </div>
           </div>
         );
-      } else if (this.props.modalType == "declined" || this.state.declined == true) {
+      } else if (this.props.modalType == "declined" || this.state.declined === true) {
         return(
           <div className="smallText">
             <p>
@@ -97,7 +97,7 @@ export default class ModalWindow extends React.Component {
           </p>
           </div>
         );
-      } else if (this.state.accepted == true) {
+      } else if (this.state.accepted === true) {
         return(
           <div className="smallText">
             <p>

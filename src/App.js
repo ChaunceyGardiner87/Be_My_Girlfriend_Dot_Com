@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CheckboxController from './CheckboxController';
 import SubmitButton from './SubmitButton';
+import $ from 'jquery';
 
 import ModalWindow from './ModalWindow';
 
@@ -62,7 +63,7 @@ export default class App extends Component {
       		<CheckboxController callback={this.checkboxCallback} />
 
           <SubmitButton clickHandler={this.submitHandler}/>
-          <ModalWindow modalType={this.state.answer} isOpen={this.state.modalOpen} closeModal={this.closeModal} />
+          <ModalWindow modalType={this.state.answer} isOpen={this.state.modalOpen} ariaHideApp={false} closeModal={this.closeModal} />
       </div>
     );
   }
