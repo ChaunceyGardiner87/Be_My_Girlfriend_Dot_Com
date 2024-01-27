@@ -2,18 +2,13 @@
 
 .root {
 	font-family: arial;
-	position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-	background-color: #ffa4a4;
-	padding: 1rem;
 
 	h1 {
 		color: #ce4a4a;
-		font-size: 5rem;
+		font-size: 3rem;
 		text-align: center;
+
+		@include media-breakpoint-up(md) { font-size: 5rem; }
 	}
 
 	.boxes{
@@ -25,10 +20,12 @@
 
 		.checkbox {
 			display: block;
-			width: 200px;
-			height: 200px;
+			width: 100px;
+			height: 100px;
 			background: fill;
 			background-size: cover;
+
+			@include media-breakpoint-up(md) { width: 200px; height: 200px }
 		}
 
 		h2 {
