@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Checkbox from './Checkbox';
 import Container from 'react-bootstrap/Container';
-import classnames from 'classnames';
 
 export default class CheckboxController extends Component {
 	constructor(props) {

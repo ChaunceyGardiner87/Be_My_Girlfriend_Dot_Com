@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Container } from 'react-bootstrap';
 
 export default class Checkbox extends Component {
 	constructor(props) {

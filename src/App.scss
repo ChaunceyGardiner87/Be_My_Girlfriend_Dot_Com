@@ -62,30 +62,37 @@
 	}
 }
 
+.tscs {
+	.title {
+		font-size: 2.5rem;
+		text-decoration: underline;
+		margin-bottom: 1rem;
+	}
+
+	.body {
+		font-size: 1.5rem;
+	}
+}
+
+.buttons {
+	justify-content: space-evenly;
+}
+
 .acceptButton {
 		width: 200px;
-		height: 100px;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
 
 		background-color: #EC3B91;
 
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10%;
-
 		border-style: solid;
 		border-radius: 15px;
-
-		h1 {
-			margin-top: 15%;
-			text-align: center;
-		}
 	}
 
 .closeModalButton{
-	position: absolute;
-	right: 4%;
-	top: 2%;
-	font-size: 28px;
+	position: sticky;
+	top: 0;
+	font-size: 1.5rem;
 }
 
 
@@ -93,5 +100,12 @@
 	font-size: 3.5rem;
 	text-align: center;
 
-	@include media-breakpoint-up(md) { font-size: 10rem; }
+	@include media-breakpoint-up(md) { font-size: 5rem; }
+}
+
+.acceptText {
+	font-size: 1.5rem;
+	text-align: center;
+
+	@include media-breakpoint-up(md) { font-size: 3rem; }
 }
