@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Checkbox from './Checkbox';
+import Container from 'react-bootstrap/Container';
 import classnames from 'classnames';
 
 export default class CheckboxController extends Component {
@@ -49,14 +50,10 @@ export default class CheckboxController extends Component {
 
 	render() {
 		return(
-			<div className="boxes">
-				<div className="box left" style={{display: "inline-block"}}>
-	  				<Checkbox idName = "yesBox" boxText="Yes!" clickHandler={this.yesBoxClickHandler} selected={this.state.yesChecked}/>
-	  			</div>
-	  			<div className="box right" style={{display: "inline-block"}}>
-	  				<Checkbox idName = "noBox" boxText="No Way!" clickHandler={this.noBoxClickHandler} selected={this.state.noChecked}/>
-	  			</div>
-	      	</div>
+			<Container fluid className="boxes d-flex">
+				<Checkbox idName = "yesBox" boxText="Yes!" clickHandler={this.yesBoxClickHandler} selected={this.state.yesChecked}/>
+				<Checkbox idName = "noBox" boxText="No Way!" clickHandler={this.noBoxClickHandler} selected={this.state.noChecked}/>
+	      	</Container>
       	);
 	}
 }
