@@ -14,10 +14,6 @@ export default class Checkbox extends Component {
 	}
 
 	render() {
-		var style = {
-			display: "inline-block"
-		};
-
 		var classes;
 
 		if (this.props.selected) {

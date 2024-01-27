@@ -79,15 +79,16 @@
 }
 
 .acceptButton {
-		width: 200px;
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
+	margin: 0.5rem;
+	width: 200px;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
 
-		background-color: #EC3B91;
+	background-color: #EC3B91;
 
-		border-style: solid;
-		border-radius: 15px;
-	}
+	border-style: solid;
+	border-radius: 15px;
+}
 
 .closeModalButton{
 	position: sticky;
