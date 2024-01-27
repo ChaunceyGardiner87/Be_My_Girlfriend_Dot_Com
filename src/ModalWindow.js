@@ -67,7 +67,7 @@ export default class ModalWindow extends React.Component {
     }
 
     getText() {
-      if (this.props.modalType == "terms" && this.state.accepted === false && this.state.declined === false) {
+      if (this.props.modalType === "terms" && this.state.accepted === false && this.state.declined === false) {
         return (
           <div>
           <h1>Terms and Conditions</h1>
@@ -85,11 +85,11 @@ export default class ModalWindow extends React.Component {
           </div>
 
           <div className="acceptButton" style={{display: "inline-block", float: "right", marginRight: "15%"}} onClick={this.declineTerms}>
-            <h1>decline</h1>
+            <h1>Decline</h1>
           </div>
           </div>
         );
-      } else if (this.props.modalType == "declined" || this.state.declined === true) {
+      } else if (this.props.modalType === "declined" || this.state.declined === true) {
         return(
           <div className="smallText">
             <p>
@@ -114,8 +114,7 @@ export default class ModalWindow extends React.Component {
         <div>
           <Modal onRequestClose={this.requstCloseModal} contentLabel={"Terms and Conditions"} isOpen={this.props.isOpen} style={{overlay: {backgroundColor: 'rgba(0, 0, 0, 0.4)'}}}>
           <button className="closeModalButton" onClick={this.requstCloseModal}>Close</button>
-            {this.getText()}            
-
+            {this.getText()}
           </Modal>
         </div>
       );
