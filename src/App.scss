@@ -1,39 +1,36 @@
+@import '../node_modules/bootstrap/scss/bootstrap-utilities.scss';
+
 .root {
 	font-family: arial;
-	position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-	background-color: #ffa4a4;
 
-	.text {
+	h1 {
 		color: #ce4a4a;
-		padding-top: 35%;
-		font-size: 40px;
+		font-size: 3rem;
 		text-align: center;
+
+		@include media-breakpoint-up(md) { font-size: 5rem; }
 	}
 
 	.boxes{
-		display: block;
-		padding-left: 15%;
-		padding-right: 15%;
-		padding-top: 15%;
+		justify-content: space-evenly;
+
+		.checkbox-container {
+			margin: 1rem;
+		}
 
 		.checkbox {
 			display: block;
-			margin-left: 10%;
-			margin-right: 10%;
-			width: 200px;
-			height: 200px;
+			width: 100px;
+			height: 100px;
 			background: fill;
 			background-size: cover;
+
+			@include media-breakpoint-up(md) { width: 200px; height: 200px }
 		}
 
-		h1 {
+		h2 {
 			text-align: center;
 			color: #ce4a4a;
-
 		}
 
 		.checkbox.checked {
@@ -42,16 +39,6 @@
 
 		.checkbox.unchecked {
 			background-image: url('../img/unchecked-checkbox.png');
-		}
-
-		.left{
-			float: left;
-			padding-left: 5%;
-		}
-
-		.right{
-			float: right;
-			padding-right: 5%;
 		}
 	}
 
@@ -63,12 +50,11 @@
 
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 50%;
 
 		border-style: solid;
 		border-radius: 15px;
 
-		h1 {
+		h2 {
 			margin-top: 15%;
 			text-align: center;
 			color: white;
@@ -76,35 +62,51 @@
 	}
 }
 
-.acceptButton {
-		width: 200px;
-		height: 100px;
-
-		background-color: #EC3B91;
-
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10%;
-
-		border-style: solid;
-		border-radius: 15px;
-
-		h1 {
-			margin-top: 15%;
-			text-align: center;
-		}
+.tscs {
+	.title {
+		font-size: 2.5rem;
+		text-decoration: underline;
+		margin-bottom: 1rem;
 	}
 
+	.body {
+		font-size: 1.5rem;
+	}
+}
+
+.buttons {
+	justify-content: space-evenly;
+}
+
+.acceptButton {
+	margin: 0.5rem;
+	width: 200px;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+
+	background-color: #EC3B91;
+
+	border-style: solid;
+	border-radius: 15px;
+}
+
 .closeModalButton{
-	position: absolute;
-	right: 4%;
-	top: 2%;
-	font-size: 28px;
+	position: sticky;
+	top: 0;
+	font-size: 1.5rem;
 }
 
 
 .smallText{
-	font-size: 100px;
+	font-size: 3.5rem;
 	text-align: center;
-	margin-top: 35%;
+
+	@include media-breakpoint-up(md) { font-size: 5rem; }
+}
+
+.acceptText {
+	font-size: 1.5rem;
+	text-align: center;
+
+	@include media-breakpoint-up(md) { font-size: 3rem; }
 }

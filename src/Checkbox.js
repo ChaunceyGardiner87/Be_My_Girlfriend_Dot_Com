@@ -14,10 +14,6 @@ export default class Checkbox extends Component {
 	}
 
 	render() {
-		var style = {
-			display: "inline-block"
-		};
-
 		var classes;
 
 		if (this.props.selected) {
@@ -28,9 +24,9 @@ export default class Checkbox extends Component {
 
 
 		return(
-			<div style={style}>
+			<div className="checkbox-container">
 				<div className={classes} id={this.props.idName} onClick={this.click}/>
-				<h1>{this.props.boxText}</h1>
+				<h2>{this.props.boxText}</h2>
 			</div>
 		)
 	}

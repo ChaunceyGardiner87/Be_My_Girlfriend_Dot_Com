@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Modal from "react-modal";
+import $ from 'jquery';
+import { Stack } from 'react-bootstrap';
 
 export default class ModalWindow extends React.Component {
     constructor () {
@@ -66,30 +68,32 @@ export default class ModalWindow extends React.Component {
     }
 
     getText() {
-      if (this.props.modalType == "terms" && this.state.accepted == false && this.state.declined == false) {
+      if (this.props.modalType === "terms" && this.state.accepted === false && this.state.declined === false) {
         return (
-          <div>
-          <h1>Terms and Conditions</h1>
-            <p>
-              1. Enjoying and valuing time together; and actively working to make it happen <br/><br/>
-              3. A commitment to updating the Trello adventure board
-              4. Effective communication and problem-solving skills <br/><br/>
-              5. Charlie will provide foot rubs on request
-              6. Parties agree to utilise a vast array of emojis for all communication needs. 🌟❤️😊
-              7. Regular consumption of noodles is mandatory <br/><br/>
-                  
-          </p>
+          <>
+            <div className='tscs'>
+              <h2 className='title'>Terms and Conditions</h2>
+              <p className="body">
+                1. Enjoying and valuing time together; and actively working to make it happen <br/><br/>
+                3. A commitment to updating the Trello adventure board<br/><br/>
+                4. Effective communication and problem-solving skills <br/><br/>
+                5. Charlie will provide foot rubs on request<br/><br/>
+                6. Parties agree to utilise a vast array of emojis for all communication needs. 🌟❤️😊<br/><br/>
+                7. Regular consumption of noodles is mandatory
+              </p>
+            </div>
+            <div className='d-flex buttons'>
+              <div className="acceptButton" style={{display: "inline-block"}} onClick={this.acceptTerms}>
+                <h3>Accept</h3>
+              </div>
 
-          <div className="acceptButton" style={{display: "inline-block", float: "left", marginLeft: "15%"}} onClick={this.acceptTerms}>
-            <h1>Accept</h1>
+            <div className="acceptButton" style={{display: "inline-block"}} onClick={this.declineTerms}>
+              <h3>Decline</h3>
+            </div>
           </div>
-
-          <div className="acceptButton" style={{display: "inline-block", float: "right", marginRight: "15%"}} onClick={this.declineTerms}>
-            <h1>decline</h1>
-          </div>
-          </div>
+        </>
         );
-      } else if (this.props.modalType == "declined" || this.state.declined == true) {
+      } else if (this.props.modalType === "declined" || this.state.declined === true) {
         return(
           <div className="smallText">
             <p>
@@ -97,9 +101,9 @@ export default class ModalWindow extends React.Component {
           </p>
           </div>
         );
-      } else if (this.state.accepted == true) {
+      } else if (this.state.accepted === true) {
         return(
-          <div className="smallText">
+          <div className="acceptText">
             <p>
               Your request has been noted, and submitted for processing.<br/><br/>
               I will get back to you within 1 business day.<br/><br/>
@@ -113,9 +117,10 @@ export default class ModalWindow extends React.Component {
       return (
         <div>
           <Modal onRequestClose={this.requstCloseModal} contentLabel={"Terms and Conditions"} isOpen={this.props.isOpen} style={{overlay: {backgroundColor: 'rgba(0, 0, 0, 0.4)'}}}>
-          <button className="closeModalButton" onClick={this.requstCloseModal}>Close</button>
-            {this.getText()}            
-
+            <Stack gap={3} className='text-center'>
+              <button className="closeModalButton" onClick={this.requstCloseModal}>Close</button>
+              {this.getText()}
+            </Stack>
           </Modal>
         </div>
       );
